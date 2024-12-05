@@ -11,25 +11,33 @@
     <h1>Assignment 1-6</h1>
     <nav>
       <ul>
-        <li><a href="#" onclick="loadAssignment('assignment1.html')">Assignment 1</a></li>
-        <li><a href="#" onclick="loadAssignment('assignment2.html')">Assignment 2</a></li>
-        <li><a href="#" onclick="loadAssignment('assignment3.html')">Assignment 3</a></li>
-        <li><a href="#" onclick="loadAssignment('assignment4.html')">Assignment 4</a></li>
-        <li><a href="#" onclick="loadAssignment('assignment5.html')">Assignment 5</a></li>
-        <li><a href="#" onclick="loadAssignment('assignment6.html')">Assignment 6</a></li>
+        <li><a href="#" onclick="loadAssignment('assignment1.html')" aria-label="Load Assignment 1">Assignment 1</a></li>
+        <li><a href="#" onclick="loadAssignment('assignment2.html')" aria-label="Load Assignment 2">Assignment 2</a></li>
+        <li><a href="#" onclick="loadAssignment('assignment3.html')" aria-label="Load Assignment 3">Assignment 3</a></li>
+        <li><a href="#" onclick="loadAssignment('assignment4.html')" aria-label="Load Assignment 4">Assignment 4</a></li>
+        <li><a href="#" onclick="loadAssignment('assignment5.html')" aria-label="Load Assignment 5">Assignment 5</a></li>
+        <li><a href="#" onclick="loadAssignment('assignment6.html')" aria-label="Load Assignment 6">Assignment 6</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- The iframe will display each assignment -->
-    <iframe id="assignment-frame" src="assignment1.html" frameborder="0"></iframe>
+    <!-- Responsive iframe for displaying assignments -->
+    <iframe id="assignment-frame" src="assignment1.html" title="Assignment Frame" frameborder="0"></iframe>
+    <noscript>
+      <p>Please enable JavaScript to view assignments.</p>
+    </noscript>
   </main>
 
   <script>
     // Function to load different assignments dynamically
     function loadAssignment(assignment) {
-      document.getElementById('assignment-frame').src = assignment;
+      const frame = document.getElementById('assignment-frame');
+      frame.src = assignment;
+
+      // Highlight selected navigation item
+      document.querySelectorAll('nav ul li a').forEach(link => link.classList.remove('active'));
+      event.target.classList.add('active');
     }
   </script>
 </body>
