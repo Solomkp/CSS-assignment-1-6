@@ -107,23 +107,62 @@ iframe {
 /* Responsive Styles */
 /* ---------- */
 
-/* Mobile Navigation */
-@media (max-width: 800px) {
-  .hideOnMobile {
-    display: none;
-  }
-
-  .menu-button {
-    display: block;
-  }
-}
-
+//* Responsive Styles for Assignment Buttons */
 @media (max-width: 768px) {
-  nav ul {
+  .assignment-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
+
+  .assignment-button {
+    width: 90%; /* Make buttons full-width with some margin */
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: var(--header-color);
+    color: var(--white-color);
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .assignment-button:hover {
+    background-color: var(--nav-hover-color);
+  }
+
+  /* Center text for mobile */
+  .assignment-header {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  /* Prevent text overflow */
+  .assignment-content {
+    padding: 10px;
+    word-wrap: break-word;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* Adjust layout for larger screens */
+@media (min-width: 769px) {
+  .assignment-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Grid layout for larger screens */
+    gap: 15px;
+  }
+
+  .assignment-button {
+    width: auto;
+    font-size: 1rem;
+  }
+}
+
 
   header h1 {
     font-size: 1.5rem;
@@ -210,3 +249,4 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
