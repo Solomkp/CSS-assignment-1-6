@@ -70,7 +70,6 @@ nav ul {
   margin: 0;
   padding: 0;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -99,7 +98,7 @@ main {
 
 iframe {
   width: 100%;
-  height: auto;
+  height: 100vh;
   aspect-ratio: 16 / 9;
   border: 1px solid #ddd;
   border-radius: 8px;
