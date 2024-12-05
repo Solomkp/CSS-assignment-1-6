@@ -31,11 +31,7 @@ body {
   font-size: 1rem;
 }
 
-/* ---------- */
-/* FONTS */
-/* ---------- */
-
-/* Font weight examples for Gilroy */
+/* Font-Face Definitions */
 @font-face {
   font-family: "Gilroy";
   src: url("./assets/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
@@ -110,34 +106,74 @@ iframe {
 /* ---------- */
 /* Responsive Styles */
 /* ---------- */
+
+/* Mobile Navigation */
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
-  /* Responsive Navigation Menu */
   nav ul {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
 
-  /* Responsive Header Text */
   header h1 {
     font-size: 1.5rem;
   }
 
-  /* Responsive Navigation Links */
   nav ul li a {
     font-size: 0.9rem;
     padding: 6px 12px;
   }
 
-  /* Adjust Main Content */
   main {
     margin: 10px auto;
     width: 95%;
   }
 
-  /* Adjust Body Font Size */
   body {
     font-size: 0.9rem;
+  }
+
+  .nav-container {
+    padding-inline: 2rem;
+  }
+}
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+  .nav-list {
+    gap: 2rem;
+  }
+
+  .pricing {
+    padding-inline: 0rem;
+  }
+
+  .pricing-card-1,
+  .pricing-card-3 {
+    padding-inline: 3.55rem;
+    padding-block: 1.5rem 2rem;
+  }
+
+  .pricing-card-2 {
+    padding-inline: 4rem;
+    padding-block: 3rem 6.25rem;
+  }
+}
+
+/* Small Screens */
+@media (max-width: 480px) {
+  .side-bar {
+    width: 100%;
   }
 }
 
@@ -153,7 +189,6 @@ svg {
   max-width: 100%;
 }
 
-/* Remove built-in form styles */
 input,
 button,
 textarea,
@@ -161,7 +196,6 @@ select {
   font: inherit;
 }
 
-/* Avoid text overflow */
 p,
 h1,
 h2,
@@ -172,7 +206,6 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* Root Stacking Context */
 #root,
 #__next {
   isolation: isolate;
