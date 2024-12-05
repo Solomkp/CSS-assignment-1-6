@@ -97,14 +97,12 @@ main {
 }
 
 iframe {
- position: absolute;
- top: 1;
- left: 0;
- bottom: 1;
- right: 0;
- width: 100%;
- height: 100%;
- border: none;
+  width: 100%;
+  height: 100hv;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: var(--white-color);
 }
 
 /* ---------- */
