@@ -1,0 +1,108 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d0cfe8; /* Light purple background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card Design */
+.card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #ffeeba; /* Soft yellow */
+  color: #333;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image */
+.product-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+}
+
+/* Content Section */
+.content {
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.content .series {
+  font-size: 1rem;
+  color: #777;
+  font-style: italic;
+}
+
+.content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    max-width: 90%;
+  }
+
+  .content h1 {
+    font-size: 1.2rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .badge {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .content h1 {
+    font-size: 1rem;
+  }
+
+  .content p {
+    font-size: 0.85rem;
+  }
+}

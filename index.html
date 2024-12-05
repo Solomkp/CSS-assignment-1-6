@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 1-6</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Assignment 1-6</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="loadAssignment('assignment1.html')">Assignment 1</a></li>
+        <li><a href="#" onclick="loadAssignment('assignment2.html')">Assignment 2</a></li>
+        <li><a href="#" onclick="loadAssignment('assignment3.html')">Assignment 3</a></li>
+        <li><a href="#" onclick="loadAssignment('assignment4.html')">Assignment 4</a></li>
+        <li><a href="#" onclick="loadAssignment('assignment5.html')">Assignment 5</a></li>
+        <li><a href="#" onclick="loadAssignment('assignment6.html')">Assignment 6</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- The iframe will display each assignment -->
+    <iframe id="assignment-frame" src="assignment1.html" frameborder="0"></iframe>
+  </main>
+
+  <script>
+    // Function to load different assignments dynamically
+    function loadAssignment(assignment) {
+      document.getElementById('assignment-frame').src = assignment;
+    }
+  </script>
+</body>
+</html>
